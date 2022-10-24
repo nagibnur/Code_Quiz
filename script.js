@@ -26,6 +26,8 @@ const btn_answer = [
 		console.log(btn_answer[i].textContent);
 		 if (current_question >= myQuestions.length){
 			 submit_page.removeAttribute('hidden');
+             scoreEl.textContent = score;
+             console.log(scoreEl);
 			 quiz_container.setAttribute('hidden', true);
 			 return;
 		 }
