@@ -7,7 +7,22 @@ const answer3 = document.querySelector('#answer3');
 const answer4 = document.querySelector('#answer4');
 const timeEl = document.querySelector('#time');
 const submit_page = document.querySelector('#submit_page');
+let current_question = 0;
 
+const btn_answer = [
+	answer1, answer2, answer3, answer4,] 
+ for (let i = 0; i < btn_answer.length; i++) {
+	 btn_answer[i].addEventListener('click', function () {
+		 if (current_question >= myQuestions.length){
+			 submit_page.removeAttribute('hidden');
+			 quiz_container.setAttribute('hidden', true);
+			 return;
+		 }
+		 display_question(current_question);
+		 current_question ++;
+	 });
+	 
+ }
 
 
 start_button.addEventListener('click',  function () {
