@@ -20,6 +20,19 @@ start_button.addEventListener('click',  function () {
 });
 
 
+let secondsLeft = 30;
+function setTime() {
+    const timerInterval = setInterval(function() {
+        secondsLeft--;
+        timeEl.textContent = "Time: " + secondsLeft + '.' ;
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+        }
+    
+    },1000);
+}
+
+
 
 
 const myQuestions = [
