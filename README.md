@@ -6,4 +6,6 @@
 
 ## mock up
 
-## Link
+## Link 
+
+https://nagibnur.github.io/Code_Quiz/
