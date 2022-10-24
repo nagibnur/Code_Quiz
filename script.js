@@ -18,3 +18,55 @@ start_button.addEventListener('click',  function () {
     setTime();
 
 });
+
+
+
+
+const myQuestions = [
+    {
+        question: "How high is Mount Everest?",
+        a: "5,849 m",
+        b: "6,849 m",
+        c: "7,849 m",
+        d: "8,849 m",
+        correct: "d",
+    },
+
+    {
+        question: "What is the largest continent in size?",
+        a: "Asia",
+        b: "Africa",
+        c: "Europe",
+        d: "North America",
+        correct: "a",
+    },
+
+    {
+        question: "What is the longest river in the world?",
+        a: "Amazon River",
+        b: "Nile",
+        c: "Yellow River",
+        d: "Congo River",
+        correct: "b",
+    },
+
+    {
+        question: "How many sides has a Hexagon?",
+        a: "5",
+        b: "6",
+        c: "7",
+        d: "8",
+        correct: "b",
+    },
+
+    {
+        question: "Who is the CEO of Amazon?",
+        a: "Elon Musk",
+        b: "Tim Cook",
+        c: "Mark Zuckerberg",
+        d: "Jeff Bezos",
+        correct: "d",
+    },
+
+
+]
