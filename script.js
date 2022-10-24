@@ -20,6 +20,15 @@ start_button.addEventListener('click',  function () {
 });
 
 
+function display_question (question_index) {
+    quiz_questions.textContent = myQuestions[question_index].question
+    answer1.textContent = myQuestions[question_index].a
+    answer2.textContent = myQuestions[question_index].b
+    answer3.textContent = myQuestions[question_index].c
+    answer4.textContent = myQuestions[question_index].d
+}
+
+
 let secondsLeft = 30;
 function setTime() {
     const timerInterval = setInterval(function() {
