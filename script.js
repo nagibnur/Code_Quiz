@@ -8,6 +8,7 @@ const answer4 = document.querySelector('#answer4');
 const timeEl = document.querySelector('#time');
 const submit_page = document.querySelector('#submit_page');
 const scoreEl = document.querySelector('#score');
+const initialEl = document.querySelector('#initial_user');
 let current_question = 0;
 let score = 0
 
@@ -18,16 +19,13 @@ const btn_answer = [
 	 btn_answer[i].addEventListener('click', function () {
 		
 		if (btn_answer[i].textContent === myQuestions[current_question -1].correct) {
-			console.log('correct');
 			score ++;
 		}else {
-			console.log('not correct');
 		}
-		console.log(btn_answer[i].textContent);
+		
 		 if (current_question >= myQuestions.length){
 			 submit_page.removeAttribute('hidden');
-             scoreEl.textContent = score;
-             console.log(scoreEl);
+             scoreEl.textContent = 'Your score is : ' + score;
 			 quiz_container.setAttribute('hidden', true);
 			 return;
 		 }
@@ -62,8 +60,9 @@ function setTime() {
     const timerInterval = setInterval(function() {
         secondsLeft--;
         timeEl.textContent = "Time: " + secondsLeft + '.' ;
-        if(secondsLeft === 0) {
+        if(secondsLeft === 0 || current_question >= myQuestions.length)  {
             clearInterval(timerInterval);
+            timeEl.textContent = ''
         }
     
     },1000);
@@ -120,3 +119,4 @@ const myQuestions = [
 
 
 ]
+
