@@ -7,12 +7,23 @@ const answer3 = document.querySelector('#answer3');
 const answer4 = document.querySelector('#answer4');
 const timeEl = document.querySelector('#time');
 const submit_page = document.querySelector('#submit_page');
+const scoreEl = document.querySelector('#score');
 let current_question = 0;
+let score = 0
+
 
 const btn_answer = [
 	answer1, answer2, answer3, answer4,] 
  for (let i = 0; i < btn_answer.length; i++) {
 	 btn_answer[i].addEventListener('click', function () {
+		
+		if (btn_answer[i].textContent === myQuestions[current_question -1].correct) {
+			console.log('correct');
+			score ++;
+		}else {
+			console.log('not correct');
+		}
+		console.log(btn_answer[i].textContent);
 		 if (current_question >= myQuestions.length){
 			 submit_page.removeAttribute('hidden');
 			 quiz_container.setAttribute('hidden', true);
@@ -66,7 +77,7 @@ const myQuestions = [
         b: "6,849 m",
         c: "7,849 m",
         d: "8,849 m",
-        correct: "d",
+        correct: "8,849 m",
     },
 
     {
@@ -75,7 +86,7 @@ const myQuestions = [
         b: "Africa",
         c: "Europe",
         d: "North America",
-        correct: "a",
+        correct: "Asia",
     },
 
     {
@@ -84,7 +95,7 @@ const myQuestions = [
         b: "Nile",
         c: "Yellow River",
         d: "Congo River",
-        correct: "b",
+        correct: "Nile",
     },
 
     {
@@ -93,7 +104,7 @@ const myQuestions = [
         b: "6",
         c: "7",
         d: "8",
-        correct: "b",
+        correct: "6",
     },
 
     {
@@ -102,7 +113,7 @@ const myQuestions = [
         b: "Tim Cook",
         c: "Mark Zuckerberg",
         d: "Jeff Bezos",
-        correct: "d",
+        correct: "Jeff Bezos",
     },
 
 
