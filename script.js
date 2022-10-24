@@ -25,7 +25,7 @@ const btn_answer = [
 		
 		 if (current_question >= myQuestions.length){
 			 submit_page.removeAttribute('hidden');
-             scoreEl.textContent = 'Your score is : ' + score;
+             scoreEl.textContent = 'Your score is 5 out of  : ' + score;
 			 quiz_container.setAttribute('hidden', true);
 			 return;
 		 }
